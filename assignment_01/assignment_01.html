@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Photo Gallery</title>
+        <style>
+            .title {
+                text-align:center;
+            }
+
+
+            .row {
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                flex-flow: row nowrap;
+        
+            }
+
+            .small {
+                object-fit: cover;
+                float: left;
+                width: 230px;
+                height: 230px;
+                margin: 7px;
+            }
+
+            .small_change {
+                object-fit: cover;
+                float: left;
+                width: 230px;
+                height: 230px;
+                object-position: bottom;
+                margin: 7px;
+            }
+
+            .big {
+                float: left;
+                width: 50%;
+                height: 50%;
+                padding-bottom: 10px;
+            }
+            /*can i combine .big and .center to be more efficient?*/
+
+            .center {
+                display: block;
+                margin-left:425px;
+            }
+            /*how do i make the big picture exactly in the center? right now i maunally moved the margins*/
+
+        </style>
+    </head>
+    <body>
+        <div class="title">
+             <h1>INTREFIED COLLECTION GALLERY</h1>
+        </div>
+
+        <div class="row">
+
+        <img class="small" id='img1' src="bviewblkshirt.png" alt="birdseye view of Intrefied's black shirt">
+        <img class="small" id="img2" src="blkshirt_front.jpg" alt="front view of Intrefied's black shirt with a spider web design">
+        <img class="small" id="img3" src="blkshirt_back.png" alt="back view of Intrefied's black shirt with colorful words design">
+        <img class="small_change" id="img4" src="NFshirt_front.jpg" alt="front view of Intrefied's green Natura Futura shirt with a skull design">
+        <img class="small" id="img5" src="INTcustomer.jpg" alt="a girl customer shopping for Intrefied's shirts">
+
+        </div>
+
+        <div class="center">
+            <img class="big" src="bviewblkshirt.png" alt="birdseye view of Intrefied's black shirt">
+        </div>
+
+
+
+        <script>
+
+            document.querySelector('#img1').onclick= function(){
+                document.querySelector('.big').src = "bviewblkshirt.png";
+                document.querySelector('.big').alt = "birds eye view of black shirt"
+            }
+
+            document.querySelector('#img2').onclick= function(){
+                document.querySelector('.big').src = "blkshirt_front.jpg";
+                document.querySelector('.big').alt = "front view of black shirt"
+            }
+            
+            document.querySelector('#img3').onclick= function(){
+                document.querySelector('.big').src = "blkshirt_back.png";
+                document.querySelector('.big').alt = "back view of black shirt"
+            }
+
+            document.querySelector('#img4').onclick= function(){
+                document.querySelector('.big').src = "NFshirt_front.jpg";
+                document.querySelector('.big').alt = "front view of Intrefied's green Natura Futura shirt with a skull design"
+            }
+
+            document.querySelector('#img5').onclick= function(){
+                document.querySelector('.big').src = "INTcustomer.jpg";
+                document.querySelector('.big').alt = "customer shopping"
+            }
+
+
+        </script>        
+    </body>
+</html>
