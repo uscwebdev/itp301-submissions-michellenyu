@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<style>
+		#display {
+			font-size: 2em;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12 text-center mt-5">JS Calculator</h1>
+		</div> <!-- .row -->
+		<div class="row">
+			<div id="calculator" class="mt-4 col-12 col-md-6 ml-md-auto mr-md-auto col-lg-4">
+				<div class="row">
+					<input type="text" id="display" class="col-12 text-right form-control" value="0">
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="calc-ac" class="col-9 btn btn-lg btn-outline-dark">AC</button>
+					<button id="calc-div" class="col-3 btn btn-lg btn-outline-dark">/</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="button7" class="col-3 btn btn-lg btn-outline-dark">7</button>
+					<button id="button8" class="col-3 btn btn-lg btn-outline-dark">8</button>
+					<button id="button9" class="col-3 btn btn-lg btn-outline-dark">9</button>
+					<button id="calc-mult" class="col-3 btn btn-lg btn-outline-dark">x</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="button4" class="col-3 btn btn-lg btn-outline-dark">4</button>
+					<button id="button5" class="col-3 btn btn-lg btn-outline-dark">5</button>
+					<button id="button6" class="col-3 btn btn-lg btn-outline-dark">6</button>
+					<button id="calc-sub" class="col-3 btn btn-lg btn-outline-dark">-</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="button1" class="col-3 btn btn-lg btn-outline-dark">1</button>
+					<button id="button2" class="col-3 btn btn-lg btn-outline-dark">2</button>
+					<button id="button3" class="col-3 btn btn-lg btn-outline-dark">3</button>
+					<button id="calc-add" class="col-3 btn btn-lg btn-outline-dark">+</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="button0" class="col-6 btn btn-lg btn-outline-dark">0</button>
+					<button id="calc-dot" class="col-3 btn btn-lg btn-outline-dark">.</button>
+					<button id="calc-equal" class="col-3 btn btn-lg btn-outline-dark">=</button>
+				</div> <!-- .row -->
+			</div> <!-- #calculator -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+	<script>
+		/*
+			Workflow:
+				1. user enters a number in the input field.
+				2. user presses an operation button (+ or -).
+					a. Save user input in a variable 'num1'
+					b. save the operation in a variable (+ or -).
+					c. clear the input field.
+				3. user enters a number in the input field.
+				4. user presses the = button.
+					a. if the saved operation is a '+', then perform addition.
+					b. else if th save operation is a '-', then perform subtraction.
+	
+		*/
+	
+
+//buttons
+
+		document.querySelector('#button0').onclick = function(){
+			displayvalue = document.querySelector('#display').value;
+			
+			if (displayvalue == '0') {
+				displayvalue = '0';
+			} else {
+				displayvalue = displayvalue + '0';
+			}
+			document.querySelector('#display').value = displayvalue;
+		}
+
+		document.querySelector('#button1').onclick = function(){
+			displayvalue = document.querySelector('#display').value;
+			
+			if (displayvalue == '0') {
+				displayvalue = '1';
+			} else {
+				displayvalue = displayvalue + '1';
+			}
+			
+			document.querySelector('#display').value = displayvalue;
+		}
+
+		document.querySelector('#button2').onclick = function(){
+			displayvalue = document.querySelector('#display').value;
+			
+			if (displayvalue == '0') {
+				displayvalue = '2';
+			} else {
+				displayvalue = displayvalue + '2';
+			}
+			document.querySelector('#display').value = displayvalue;
+		}
+
+		document.querySelector('#button3').onclick = function(){
+			displayvalue = document.querySelector('#display').value;
+			
+			if (displayvalue == '0') {
+				displayvalue = '3';
+			} else {
+				displayvalue = displayvalue + '3';
+			}
+			document.querySelector('#display').value = displayvalue;
+		}
+
+		document.querySelector('#button4').onclick = function(){
+			displayvalue = document.querySelector('#display').value;
+			
+			if (displayvalue == '0') {
+				displayvalue = '4';
+			} else {
+				displayvalue = displayvalue + '4';
+			}
+			document.querySelector('#display').value = displayvalue;
+		}
+
+		document.querySelector('#button5').onclick = function(){
+			displayvalue = document.querySelector('#display').value;
+			
+			if (displayvalue == '0') {
+				displayvalue = '5';
+			} else {
+				displayvalue = displayvalue + '5';
+			}
+			document.querySelector('#display').value = displayvalue;
+		}
+
+		document.querySelector('#button6').onclick = function(){
+			displayvalue = document.querySelector('#display').value;
+			
+			if (displayvalue == '0') {
+				displayvalue = '6';
+			} else {
+				displayvalue = displayvalue + '6';
+			}
+			document.querySelector('#display').value = displayvalue;
+		}
+
+		document.querySelector('#button7').onclick = function(){
+			displayvalue = document.querySelector('#display').value;
+			
+			if (displayvalue == '0') {
+				displayvalue = '7';
+			} else {
+				displayvalue = displayvalue + '7';
+			}
+			document.querySelector('#display').value = displayvalue;
+		}
+
+		document.querySelector('#button8').onclick = function(){
+			displayvalue = document.querySelector('#display').value;
+			
+			if (displayvalue == '0') {
+				displayvalue = '8';
+			} else {
+				displayvalue = displayvalue + '8';
+			}
+			document.querySelector('#display').value = displayvalue;
+		}
+
+		document.querySelector('#button9').onclick = function(){
+			displayvalue = document.querySelector('#display').value;
+			
+			if (displayvalue == '0') {
+				displayvalue = '9';
+			} else {
+				displayvalue = displayvalue + '9';
+			}
+			document.querySelector('#display').value = displayvalue;
+		}
+
+
+
+
+		document.querySelector('#calc-dot').onclick = function(){
+			displayvalue = document.querySelector('#display').value;
+			
+			if (!displayvalue.includes('.') ) {
+				displayvalue = displayvalue + '.';
+				
+			}
+			
+			document.querySelector('#display').value = displayvalue;
+		}
+
+		var num1;
+		var operation;
+		
+		document.querySelector('#calc-add').onclick=function(){
+			//save user input in variable global 'num1'
+			num1 = document.querySelector('#display').value;
+			// convert it to a numeric value. we'll assume the calc only works with integers.
+			num1 = parseFloat(num1);
+	
+			operation='+';
+			//save the operation (+)/.
+	
+			//clear the input field.
+			document.querySelector('#display').value = "0";
+		
+		}
+	
+
+		document.querySelector('#calc-sub').onclick=function(){
+			//save user input in variable global 'num1'
+			num1 = document.querySelector('#display').value;
+			// convert it to a numeric value. we'll assume the calc only works with integers.
+			num1 = parseFloat(num1);
+	
+			operation='-';
+			//save the operation (-)/.
+	
+			//clear the input field.
+			document.querySelector('#display').value = "0";
+		
+		}
+
+		document.querySelector('#calc-mult').onclick=function(){
+			//save user input in variable global 'num1'
+			num1 = document.querySelector('#display').value;
+			// convert it to a numeric value. we'll assume the calc only works with integers.
+			num1 = parseFloat(num1);
+	
+			operation='*';
+			//save the operation (*)/.
+	
+			//clear the input field.
+			document.querySelector('#display').value = "0";
+		
+		}
+
+		document.querySelector('#calc-div').onclick=function(){
+			//save user input in variable global 'num1'
+			num1 = document.querySelector('#display').value;
+			// convert it to a numeric value. we'll assume the calc only works with integers.
+			num1 = parseFloat(num1);
+	
+			operation='/';
+			//save the operation (/)/.
+	
+			//clear the input field.
+			document.querySelector('#display').value = "0";
+		
+		}
+
+
+		document.querySelector('#calc-equal').onclick = function(){
+			//save user input in a local variable 'num2'
+			var num2 = document.querySelector('#display').value;
+			//covert it into a numeric value
+			num2 = parseFloat(num2);
+	
+			var result = 'error';
+	
+			if (operation == '+') {
+				result = num1 + num2;
+			} else if (operation == '-') {
+				result = num1 - num2;
+			} else if (operation == '*') {
+				result = num1 * num2;
+			} else if (operation == '/') {
+				result = num1 / num2;
+			}
+	
+			document.querySelector('#display').value=result;
+		}
+
+		document.querySelector("#calc-ac").onclick = function(){
+			document.querySelector('#display').value = "0";
+		}
+	
+		
+
+		
+	
+	</script>
+
+</body>
+
+
+</html>
