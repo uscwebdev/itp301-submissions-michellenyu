@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Liar's Dice
+        </title>
+
+    <style>
+        h2 {
+            display: inline-block;
+        }
+
+        .showcase-container{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-flow: row nowrap;
+
+        }
+
+        .product{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+        }
+    </style>
+
+    </head>
+    <body>
+
+        <h1>Liar's Dice</h1>
+        <span>Your Guess:</span> <input type="text" id="final">
+        <button class="submit" >Submit</button>
+        
+    <p></p>
+    <!--how do i break something, and make it in line again-->
+
+        <h2>Results:</h2>
+        <span id="answer">pending...</span>
+
+        <div class="showcase-container">
+            <div id="img1">
+                <img class="product" id="picture1" src="dice_images/1.png" alt="dice side 1">
+            </div>
+
+            <div id="img2">
+                <img class="product" id="picture2" src="dice_images/2.png" alt="dice side 2">
+            </div>
+
+            <div id="img3">
+                <img class="product" id="picture3" src="dice_images/3.png" alt="dice side 3">
+            </div>
+
+            <div id="img4">
+                <img class="product" id="picture4" src="dice_images/4.png" alt="dice side 4">
+            </div>
+
+            <div id="img5">
+                <img class="product" id="picture5" src="dice_images/5.png" alt="dice side 5">
+            </div>
+
+        </div>
+
+
+
+
+
+
+        
+        <script>
+
+            /*
+            1. User enters the number and clicks "submit" or similar button,
+            2. Save five random numberes into an array (equivalent to rolling five dice),
+            3. Display five dice images and yheir corresponding values,
+            4. Show a message letting users know whether they got at least one value
+            */
+
+
+            //functions have to have ()
+
+            // getting numbers on the images
+
+            document.querySelector('.submit').onclick=function(){
+
+                var numbers = [1, 2, 3, 4, 5 ];
+                 // # into strings
+
+                for (var i = 0; i < numbers.length; i++ ) {
+                    numbers[i] = Math.floor ( Math.random()*6 + 1);
+                }
+
+                var pic1="dice_images/"+ numbers[0] + ".png";
+                document.querySelector('#picture1').src=pic1;
+
+                var pic2="dice_images/"+ numbers[1] + ".png";
+                document.querySelector('#picture2').src=pic2;
+
+                var pic3="dice_images/"+ numbers[2] + ".png";
+                document.querySelector('#picture3').src=pic3;
+
+                var pic4="dice_images/"+ numbers[3] + ".png";
+                document.querySelector('#picture4').src=pic4;
+
+                var pic5="dice_images/"+ numbers[4] + ".png";
+                document.querySelector('#picture5').src=pic5;
+
+                var num = parseInt(document.querySelector('#final').value);
+
+                //var answer= document.querySelector('#answer')
+
+
+
+                if (numbers.includes(num)) {
+                    document.querySelector('#answer').innerHTML = "Correct!";
+                    document.querySelector('#answer').style.color = "green";
+                }
+                else {
+                    document.querySelector('#answer').innerHTML = "Try Again";
+                    document.querySelector('#answer').style.color = "red";
+                }
+
+
+               /* var num1;
+                num1 = document.querySelector('#final').value;
+                num1 = parseInt(num1);
+
+
+                if(num1==numbers[0] ){
+                    var answer="correct";
+                    document.querySelector('#answer').innerHTML="Correct";
+                    var correct=result.fontcolor("green");
+                    document.querySelector('#answer').innerHTML=correct;
+                }*/
+
+            }
+
+        </script>
+    </body>
+</html>
