@@ -1,0 +1,15 @@
+#color {
+  background-color: rgb(238, 164, 245);
+  width: min-content;
+}
+
+h1 {
+  text-align: center;
+}
+
+.crochet {
+  object-fit: cover;
+  float: left;
+  width: 230px;
+  height: 230px;
+}
