@@ -71,6 +71,8 @@
 
 //buttons
 
+var displayvalue;
+
 		document.querySelector('#button0').onclick = function(){
 			displayvalue = document.querySelector('#display').value;
 			
@@ -182,7 +184,7 @@
 			document.querySelector('#display').value = displayvalue;
 		}
 
-
+// end of buttons
 
 
 		document.querySelector('#calc-dot').onclick = function(){
@@ -202,7 +204,7 @@
 		document.querySelector('#calc-add').onclick=function(){
 			//save user input in variable global 'num1'
 			num1 = document.querySelector('#display').value;
-			// convert it to a numeric value. we'll assume the calc only works with integers.
+			// convert it to a numeric value. we'll assume the calc works with integers and decimals (for extra credit).
 			num1 = parseFloat(num1);
 	
 			operation='+';
@@ -217,7 +219,7 @@
 		document.querySelector('#calc-sub').onclick=function(){
 			//save user input in variable global 'num1'
 			num1 = document.querySelector('#display').value;
-			// convert it to a numeric value. we'll assume the calc only works with integers.
+			// convert it to a numeric value. we'll assume the calc  works with integers and decimals.
 			num1 = parseFloat(num1);
 	
 			operation='-';
@@ -231,7 +233,7 @@
 		document.querySelector('#calc-mult').onclick=function(){
 			//save user input in variable global 'num1'
 			num1 = document.querySelector('#display').value;
-			// convert it to a numeric value. we'll assume the calc only works with integers.
+			// convert it to a numeric value. we'll assume the calc  works with integers and decimals.
 			num1 = parseFloat(num1);
 	
 			operation='*';
@@ -245,7 +247,7 @@
 		document.querySelector('#calc-div').onclick=function(){
 			//save user input in variable global 'num1'
 			num1 = document.querySelector('#display').value;
-			// convert it to a numeric value. we'll assume the calc only works with integers.
+			// convert it to a numeric value. we'll assume the calc works with integers and decimals.
 			num1 = parseFloat(num1);
 	
 			operation='/';
