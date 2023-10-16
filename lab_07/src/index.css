@@ -1,0 +1,9 @@
+.heading-content {
+  text-align: center;
+}
+
+#default-image {
+  max-width: 300px;
+  margin: auto;
+  display: block;
+}
