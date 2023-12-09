@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+.nav {
+  background-color: rgb(155, 231, 142);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.nav ul {
+  padding: 10;
+  margin: 10;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  gap: 2rem;
+  height: 25px;
+}
+
+.nav li:hover {
+  background-color: rgb(220, 248, 229);
+}
+
+body {
+  margin: 0;
+}
+
+.foodpicture {
+  width: 250px;
+  height: auto;
+  margin: 0 auto; /* Add this line to center the image */
+  margin-right: 10px;
+}
+
+.review {
+  flex: 1;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.btn-search {
+  height: 25px;
+  width: 100px;
+  background-color: rgb(171, 236, 212);
+  border-color: rgb(31, 117, 117);
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+}
+
+.form-control-text {
+  flex: 1;
+}
+
+.submit {
+  margin-left: 10px; /* Adjust margin as needed */
+}
+
+.btn-search {
+  height: 25px;
+  width: 100px;
+  background-color: rgb(171, 236, 212);
+  border-color: rgb(31, 117, 117);
+
+  transition: background-color 0.3s;
+}
+
+.btn-search:hover {
+  background-color: rgb(31, 117, 117);
+  color: white;
+}
+
+.open-info {
+  background-color: rgb(253, 211, 196);
+  border-color: brown;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.container {
+  margin: 20px;
+}
+
+.big-recipe-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.forum-title {
+  text-align: center;
+}
+
+.forum-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
